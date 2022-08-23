@@ -1,3 +1,5 @@
-/*
-    Paste the code for your week 4 exercise below.
-*/
+
+function setup() {
+  createCanvas(500, 500);
+}
+
