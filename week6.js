@@ -9,6 +9,19 @@ function draw() {
     background(149, 206, 147);
     noStroke ();
     fill("white");
-    circle(midx-110, midy, 150, 150);
+    circle(150, mouseY+75, 150, mouseY);
 
+     //text
+ fill('white');
+ textSize(65);
+ text('Bianca', 245, 230);
+ text('Design', 245, 305);
+ textFont('Bodini');
 }
+
+
+Example 9-8: A snake following the mouse
+
+Declare an array
+
+Symmetry corresponding to the number of reflections. Change the number for different number of reflections 

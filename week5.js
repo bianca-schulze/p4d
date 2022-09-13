@@ -2,120 +2,61 @@
     Paste the code for your week 5 exercise below.
 */
 
-//var hw, hh
-//var shoppingList = ["eggs", "milk", "sugar"];
-
-var midx = 250; 
-var midy = 250;
-var direction = "down";
-
+let y = 0;
+var x = 0;
+let speed = 0;
+let gravity = 0.4;
+let newColor
+var colours = [ "#131A12", "#253425","#384D37", "#4B674A", "#5D815C", "#709B6E"];
+var cnum = 1;
+var time = 0;
 
 function setup() {
-    createCanvas(500, 500);
+  createCanvas(500, 500);
+
+  newColor = color(colours[0]);
+
+  background(newColor);
+  
+}
+
+function displayBall() {
+    noStroke ();
+    ellipse(125, y+50, 100, 100);
+}
+
+function moveBall() {
+  y = y + speed;
+  speed = speed + gravity;
+}
+
+function bounceBall() {
+  if (y > 390) {
+    // reverse the speed
+    speed = -0.95 * speed;
+    // change colour
+    cnum += 1;
+    newColor = color(colours[cnum]);
+    if(cnum == 5){
+         cnum = 0;
+    }
+  }
+   
 }
 
 function draw() {
-    background(149, 206, 147);
-    noStroke ();
-    fill("white");
-    circle(midx-110, midy, 150, 150);
-    // make circle go down 
-    if (direction=="down") {
-        midy=midy+1;
-}
-// make circle go up 
-if (direction=="up") {
-    midy=midy-1;
-}
-
-// switch directions 
-if (midy>=425) {
-    direction = "up";
-}
-if (midy<=75) {
-    direction = "down";
-}
-// circle two
-fill(255, 128)
-circle(midx-110, midy+5, 150, 150);
-    // make circle go down 
-    if (direction=="down") {
-        midy=midy+2;
-}
-// make circle go up 
-if (direction=="up") {
-    midy=midy-2;
-}
-
-// switch directions 
-if (midy>=420) {
-    direction = "up";
-}
-if (midy<=70) {
-    direction = "down";
-}
-
- //text
- fill('white');
- textSize(65);
- text('Bianca', 245, 230);
- text('Design', 245, 305);
- textFont('Bodini');
-
-}
-
-
-// function draw() {
-//     background(149, 206, 147);
-//     circleA (cx,cy);
-// }
+    background(newColor)
+    displayBall();
+    bounceBall();
+    moveBall();
+    //text
+    fill('white');
+    textSize(65);
+    text('Bianca', 245, 230);
+    text('Design', 245, 305);
+    textFont('Bodini');
     
-// function circleA(cx,cy); {  
-//     noStroke ();
-//     fill("white");
-//     circle(cx-110, cx, 150, 150);
-//     // make circle go down 
-//     if (direction=="down") {
-//         cy=cy+1;
-// }
-// // make circle go up 
-// if (direction=="up") {
-//     cy=cy-1;
-// }
 
-// // switch directions 
-// if (cy>=425) {
-//     direction = "up";
-// }
-// if (cy<=75) {
-//     direction = "down";
-// }
-
-//  //text
-//  fill('white');
-//  textSize(65);
-//  text('Bianca', 245, 230);
-//  text('Design', 245, 305);
-//  textFont('Bodini');
-
-// }
+}
 
 
-
-
-//if (windowWidth > windowHeight) {
-//    createCanvas(windowHeight, windowHeight);
-//    else(createCanvas(windowWidth, windowWidth);)
-//}
-//
-//hw = width / 2;
-//hh = height / 2;
-//
-//rectMode(CENTER);
-//
-//angleMode(DEGREES);
-
-//translate(hw, hh);
-//rotate(frameCount % 360)
-//rect(0, 0, frameCount % height, frameCount % height);
-//resetMatrix();
