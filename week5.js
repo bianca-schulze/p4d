@@ -1,6 +1,3 @@
-/*
-    Paste the code for your week 5 exercise below.
-*/
 
 let y = 0;
 var x = 0;
