@@ -28,19 +28,50 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
 	line-height: 1;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ol, ul {
 	list-style: none;
+	padding: 1em 1em 1em 1em;
+	text-decoration: none;
 }
+a:link {
+	text-decoration: none;
+	color: darkcyan;
+  }
+  
+  a:visited {
+	text-decoration: none;
+	color: darkcyan;
+	;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+	color: #5D815C;
+  }
+
 blockquote, q {
 	quotes: none;
+}
+
+h1 {
+	padding: 1em 1em 1em 1em;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+h2 {
+	padding: 1em 1em 1em 1em;
+	font-weight: bold;
+}
+p {
+	padding-left: 1em;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -52,11 +83,3 @@ table {
 	border-spacing: 0;
 }
 
-/* 
-    If you want to style the 500x500 canvas you sketch is in, add
-    CSS to the main tag, below.  You might want to add a border, 
-    change alignment or add padding for example.
-*/
-main {
-
-}
