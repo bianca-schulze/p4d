@@ -51,6 +51,7 @@ function bounceBall() {
     }
 }
 
+// the bouncing ball was inspired by https://editor.p5js.org/icm/sketches/SyojK4FjZ
 
 function keyTyped() {
     //spacebar to switch gravity

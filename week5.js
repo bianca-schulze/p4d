@@ -41,6 +41,8 @@ function bounceBall() {
          cnum = 0;
     }
   }
+
+  // the bouncing ball was inspired by https://editor.p5js.org/icm/sketches/SyojK4FjZ
    
 }
 
